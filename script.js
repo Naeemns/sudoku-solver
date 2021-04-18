@@ -4,8 +4,6 @@ const resetButton = document.getElementById("reset-button");
 const message = document.querySelector(".message h1");
 
 
-// console.log(inputs[78].value == "")
-
 const sampleInput = `0 4 0 0 0 0 1 7 9 
 0 0 2 0 0 8 0 5 4 
 0 0 6 0 0 5 0 0 8 
@@ -53,12 +51,9 @@ solveButton.addEventListener("click", async () => {
     possible = await solve(emptyCells, userInput, 0);
 
     if (possible) {
-        console.log("Hurray!!")
-        console.log(userInput, emptyCells);
         message.textContent = "Hurray!!"
     } else {
-        message.textContent = "Now solution is available..."
-        console.log("No answer")
+        message.textContent = "No solution is available..."
     }
 
     solveButton.style.pointerEvents = "all"
