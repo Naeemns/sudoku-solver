@@ -10,7 +10,6 @@ body {
 
 section {
     position: relative;
-
 }
 
 .instructions {
@@ -63,24 +62,12 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-
-
 #solver {
     padding: 10px;
 }
 
-.solver-row {
-    /* padding: 10px; */
-    /* display: flex; */
-    /* border: 1px solid red; */
-}
-
-
-
 .solver-row__square {
-    /* margin: 5px; */
     display: flex;
-    /* flex-direction: column; */
 }
 
 .solver-row__square-row {
@@ -96,21 +83,7 @@ input[type="number"] {
     outline: none;
     border: 1px solid rgb(177, 177, 177);
     font-size: 20px;
-    /* border: 1px solid gray; */
-    /* border-radius: 50px; */
     background: #e0e0e0;
-
-}
-
-.input__background-gray input {
-    /* background-color: gray; */
-    /* border-top: 1px solid white;
-    border-right: 1px solid white; */
-    /* color: white; */
-}
-
-.input__background-white input {
-    /* background-color: white; */
 }
 
 button {
@@ -167,7 +140,8 @@ button {
         font-size: 25px;
     }
 
-    #button__parent button {
+    #button__parent button,
+    .close-button {
         padding: 8px 12px;
         font-size: 13px;
     }
