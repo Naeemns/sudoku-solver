@@ -2,6 +2,8 @@ const inputs = document.querySelectorAll(".input-field");
 const solveButton = document.getElementById("button");
 const resetButton = document.getElementById("reset-button");
 const message = document.querySelector(".message h1");
+const closeButton = document.querySelector(".close-button");
+const instructionsDiv = document.querySelector(".instructions");
 
 
 const sampleInput = `0 4 0 0 0 0 1 7 9 
@@ -18,6 +20,10 @@ let possible = false;
 let resetSudoku = false;
 
 window.addEventListener("load", setSampleInput);
+
+closeButton.addEventListener("click", () => {
+    instructionsDiv.style.display = "none";
+})
 
 solveButton.addEventListener("click", async () => {
     let userInput = new Array(9).fill(0).map(row => new Array(9).fill(0));
@@ -128,7 +134,11 @@ function setSampleInput() {
     for (i = 0; i < 9; i++) {
         for (j = 0; j < 9; j++) {
             inputs[9 * i + j].value = sampleValues[i][j];
-            inputs[9 * i + j].style.color = 'black';
+            if (inputs[9 * i + j].value != 0) {
+                inputs[9 * i + j].style.color = 'black';
+            } else {
+                inputs[9 * i + j].style.color = 'crimson';
+            }
         }
     }
 }
